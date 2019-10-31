@@ -1,37 +1,28 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Card = ({ props }) => {
+const Card = ({ _id, name, image }) => {
 
-  // eslint-disable-next-line react/prop-types
-  const propElements = props.map(prop => (
-    <div key={prop._id}>
-      <header><h3>{prop.name}</h3></header>
-      <figure>
-        <img src={prop.image} alt={prop.name} />
-      </figure>
-      <p>{prop.name} has {prop._id}</p>
-    </div>
-  ));
+  if(!name) null;
+  else {
+    <header><h3>{name}</h3></header>;
+  }
 
   return (
-    <>
-      <header>
-        <h2>Characters</h2>
-      </header>
-      <section>
-        {propElements}
-      </section>
-    </>
+    <div key={_id}>
+      <header><h3>{name}</h3></header>
+      <figure>
+        <img src={image} alt={name} />
+      </figure>
+      <p>{name} has {_id}</p>
+    </div>
   );
 };
 
 Card.propTypes = {
-  props: propTypes.arrayOf(propTypes.shape({
-    _id: propTypes.string.isRequired,
-    name: propTypes.string.isRequired,
-    image: propTypes.string.isRequired
-  })).isRequired
+  _id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 };
 
 export default Card;

@@ -21,11 +21,12 @@ const Deck = ({ props, title }) => {
 };
 
 Deck.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   props: PropTypes.arrayOf(PropTypes.shape({
     _id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
+    name: PropTypes.string,
+    image: PropTypes.string,
+    gifLink: PropTypes.string
   })).isRequired,
 };
 

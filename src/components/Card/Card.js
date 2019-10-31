@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ _id, name, image }) => {
+const Card = ({ _id, name, image, gifLink }) => {
 
   if(!name) null;
   else {
@@ -12,7 +12,7 @@ const Card = ({ _id, name, image }) => {
     <div key={_id}>
       <header><h3>{name}</h3></header>
       <figure>
-        <img src={image} alt={name} />
+        <img src={image ? image : gifLink} alt={name} />
       </figure>
       <p>{name} has {_id}</p>
     </div>
@@ -21,8 +21,9 @@ const Card = ({ _id, name, image }) => {
 
 Card.propTypes = {
   _id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  name: PropTypes.string,
+  image: PropTypes.string,
+  gifLink: PropTypes.string
 };
 
 export default Card;

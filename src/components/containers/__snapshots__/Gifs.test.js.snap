@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gif component makes a successful api call and returns gifs 1`] = `
+<Deck
+  items={Array []}
+/>
+`;

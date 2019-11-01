@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Deck from './Deck.js';
 
-const DeckOfCards = ({ props }) => {  
+const DeckOfCards = ({ items }) => {  
 
   return (
     <>
-      <Deck title={'Characters'} props={props}/>
-      <Deck title={'Gifs'} props={props}/>
+      <Deck title={'Characters'} items={items}/>
+      <Deck title={'Gifs'} items={items}/>
     </>
   );
 };
 
 DeckOfCards.propTypes = {
-  props: PropTypes.arrayOf(PropTypes.shape({
+  items: PropTypes.arrayOf(PropTypes.shape({
     _id: PropTypes.string,
     name: PropTypes.string,
     image: PropTypes.string,

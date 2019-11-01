@@ -11,14 +11,14 @@ Promise.all([
       locations: locations.map(({ id, name, type, dimension }) => ({ id, name, type, dimension }))
     };
   })
-  .then(obj => fs.writeFile('./content.json', JSON.stringify(obj)))
+  .then(obj => fs.writeFile('./content.json', JSON.stringify(obj)));
 
 function get(url) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     http.get(url, res => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => resolve(JSON.parse(data)));
     });
-  })
+  });
 }

@@ -2,6 +2,6 @@
 
 exports[`gif component makes a successful api call and returns gifs 1`] = `
 <Deck
-  props={Array []}
+  items={Array []}
 />
 `;

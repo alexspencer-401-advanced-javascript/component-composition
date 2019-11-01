@@ -14,11 +14,11 @@ const DeckOfCards = ({ props }) => {
 
 DeckOfCards.propTypes = {
   props: PropTypes.arrayOf(PropTypes.shape({
-    _id: PropTypes.string.isRequired,
+    _id: PropTypes.string,
     name: PropTypes.string,
     image: PropTypes.string,
     gifLink: PropTypes.string
-  })).isRequired,
+  })),
 };
 
 export default DeckOfCards;

@@ -17,7 +17,6 @@ export default class Gif extends Component {
   }
 
   render(){
-
     return (
       <Deck props={this.state.gifs}/>
     );

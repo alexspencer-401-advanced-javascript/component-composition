@@ -17,7 +17,6 @@ export default class Character extends Component {
   }
 
   render(){
-
     return (
       <DeckOfCards props={this.state.characters}/>
     );

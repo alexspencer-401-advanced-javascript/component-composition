@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component renders Card 1`] = `
+<div
+  key="asdgadsg"
+>
+  <header>
+    <h3 />
+  </header>
+  <figure>
+    <img />
+  </figure>
+  <p>
+     has 
+    asdgadsg
+  </p>
+</div>
+`;
